@@ -2,7 +2,7 @@
 using namespace std;
 
 void cross(int n, char c){
-  if(n >= 3 and n % 2 == 1){
+  if(n >= 3 && n % 2 == 1){
     for(int i = 0; i < n; ++i){
       if(i == n / 2){
         for(int j = 0; j < n; ++j) cout << c;

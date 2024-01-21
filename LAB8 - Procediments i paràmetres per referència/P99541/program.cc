@@ -14,7 +14,6 @@ void print(int s, char c, int n){
     ++r;
   }
   cout << endl;
-  r = 0;
 }
 
 int main() {

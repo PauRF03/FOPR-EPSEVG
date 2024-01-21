@@ -1,5 +1,4 @@
 #include <typeinfo>
-
 #include <iostream>    
 #include <string>    
 #include <vector>    
@@ -21,15 +20,25 @@ struct Country {
 
 typedef vector<Country> Countries;
 
-double gdp(const Countries& p, char c, double d){
-    double res = 0;
-    for(int i = 0; i < p.size(); ++i) if(p[i].name[0] == c) for(int j = 0; j < p[i].provs.size(); ++j) if((double)p[i].provs[j].population / (double)p[i].provs[j].area > d) res += p[i].provs[j].gdp;
+int population(const Countries& p, double x){
+    int res = 0;
+    for(int i = 0; i < p.size(); ++i){
+        int a = 0;
+        for(int j = 0; j < p[i].provs.size(); ++j){
+            if(p[i].provs[j].gdp <= x) ++a;
+            if(a == 2){
+                for(int j = 0; j < p[i].provs.size(); ++j) res += p[i].provs[j].population;
+                break;
+            }
+        }
+    }
     return res;
 }
-    
+
 
 int main () {
-    int n;    cin >> n;
+    int n;
+    cin >> n;
     Countries p(n);
     for (int i=0; i<n; ++i) {
         int np;
@@ -42,13 +51,7 @@ int main () {
             ;            
         }
     }
-    cout << gdp(p,'A',10) << endl;
-    cout << gdp(p,'A',20) << endl;
-    cout << gdp(p,'A',30) << endl;
-    cout << gdp(p,'A',40) << endl;
-    cout << gdp(p,'E',10) << endl;
-    cout << gdp(p,'E',20) << endl;
-    cout << gdp(p,'E',30) << endl;
-    cout << gdp(p,'E',40) << endl;
-    cout << gdp(p,'C',40) << endl;
+    for (double x = 0; x<5000; x+=100) {
+        cout << population(p,x) << endl;
+    }
 }

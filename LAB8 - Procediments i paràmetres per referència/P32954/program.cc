@@ -3,7 +3,7 @@ using namespace std;
 
 void sort3(int& a, int& b, int& c){
    int n = 0;
-   if(a > b and a > c){
+   if(a > b && a > c){
     n = c;
     c = a;
     if(b > n){
@@ -14,13 +14,13 @@ void sort3(int& a, int& b, int& c){
       a = n;
     }
   }
-  if(a > b and a < c){
+  if(a > b && a < c){
     n = a;
     a = b;
     b = n;
     c = c;   
   }
-  if(a < b and a < c){
+  if(a < b && a < c){
     a = a;
     if(c > b){
       c = c;
@@ -31,23 +31,23 @@ void sort3(int& a, int& b, int& c){
       c = n;
     }
   }
-  if(a < b and a > c){
+  if(a < b && a > c){
     n = a;
     a = c;
     c = b;
     b = n;
   }
-  if(a == b and a > c){
+  if(a == b && a > c){
     n = a;
     a = c;
     c = n;
   }
-  if(a > b and a == c){
+  if(a > b && a == c){
     n = a;
     a = b;
     b = n;
   }
-  if(a < b and a == c){
+  if(a < b && a == c){
     n = b;
     a = a;
     b = c;
