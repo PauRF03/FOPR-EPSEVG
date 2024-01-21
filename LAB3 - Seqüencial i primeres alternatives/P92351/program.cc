@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main(){
@@ -9,11 +9,9 @@ int main(){
   if(b > 0){
     d = a / b;
     r= a % b;
-    if(r < 0){
-      if(a < 0){
-        d = d - 1;
-        r = r + b;
-      }
+    if(r < 0 && a < 0){
+      d = d - 1;
+      r = r + b;
     }
     cout << d << " " << r << endl;
   }

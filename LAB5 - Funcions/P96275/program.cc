@@ -8,7 +8,7 @@ int absolute(int x){
 
 int main(){
   int n;
-  cin>>n;
-  n=absolute(n);
-  cout<<n<<endl;
+  cin >> n;
+  n = absolute(n);
+  cout << n << endl;
 }

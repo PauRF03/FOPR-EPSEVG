@@ -10,9 +10,7 @@ bool is_palindromic(int n){
             n = n / 10;
         }
         res.push_back(n);
-    }else{
-        res.push_back(n);
-    }
+    }else res.push_back(n);
     for(int i = 0; i <= res.size() / 2; ++i) if(res[i] != res[res.size() - i - 1]) return false;
     return true;
 }

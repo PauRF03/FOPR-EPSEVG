@@ -22,13 +22,9 @@ void pentagon(){
 int main(){
 	char c;
 	while(cin >> c){
-		if(c == 'C'){
-			cub();
-		}else if(c == 'R'){
-			piramide();
-		}else if(c == 'P'){
-			pentagon();
-		}
+		if(c == 'C') cub();
+		else if(c == 'R') piramide();
+		else if(c == 'P') pentagon();
 	}
 	return 0;
 }

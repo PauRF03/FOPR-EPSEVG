@@ -12,9 +12,7 @@ int main(){
 		if(m == 60){
 			m = 0;
 			++h;
-			if(h == 24){
-            	h = 0;
-			}
+			if(h == 24) h = 0;
 		}
 	}
 	cout << setfill('0') << setw(2) << h << ":";

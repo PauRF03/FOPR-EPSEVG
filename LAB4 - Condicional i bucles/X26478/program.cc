@@ -6,9 +6,7 @@ int main(){
 	cin >> n;
 	while(n > 0){
 		cout << n << endl;
-		if(n % 5 == 0){
-			cout << "Beep" << endl;
-		}
+		if(n % 5 == 0) cout << "Beep" << endl;
 		--n;
 	}
 	return 0;
